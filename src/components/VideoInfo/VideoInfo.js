@@ -2,10 +2,9 @@ import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 
 import { FollowContext } from '~/components/FollowContext';
-import * as followService from '~/services/followService';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import Tippy from '@tippyjs/react/headless';
 import AccountPreview from '../AccountPreview/AccountPreview';

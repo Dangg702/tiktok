@@ -1,7 +1,7 @@
 import { generateVideoThumbnails, importFileandPreview } from '@rajesh896/video-thumbnails-generator';
 
 import classNames from 'classnames/bind';
-import { useRef, useState, useContext, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Tippy from '@tippyjs/react/headless';
 import { Wrapper as PopperWrapper } from '~/components/Popper/';
 import { ModalContext } from '~/components/ModalContext';
@@ -12,21 +12,14 @@ import {
     ArrowsFromLineIcon,
     AtSignIcon,
     HashtagIcon,
-    HeartVideoIcon,
     InfoRoundIcon,
-    LiveMobileIcon,
     MinusIcon,
-    MusicIcon,
-    OpenCommentIcon,
     PlusIcon,
     ScissorsIcon,
-    SearchIcon,
-    ShareIcon,
 } from '~/components/Icons';
-import Image from '~/components/Image';
 import CheckboxElement from '~/components/CheckboxElement';
 import SwitchElement from '~/components/SwitchElement';
-import { useGetUser, useVideo } from '~/hooks';
+import { useGetUser } from '~/hooks';
 import { postVideoService } from '~/services/postVideoService';
 import styles from './UploadPreview.module.scss';
 
@@ -73,8 +66,6 @@ function UploadPreview({ file, userData }) {
     // const { currentTime, calculateTime } = useVideo(videoRef);
 
     const iconClasses = cx('selector-icon', { rotate180: showOptions });
-
-    const { data } = useGetUser();
 
     useEffect(() => {
         if (file) {

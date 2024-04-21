@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import * as likeServices from '~/services/likeServices';
 
 export default function useVideo(videoRef, progressBar, animationRef, volumeBar) {
     const [volume, setVolume] = useState(0.5);
@@ -13,13 +12,12 @@ export default function useVideo(videoRef, progressBar, animationRef, volumeBar)
     const handlePlayVideo = () => {
         const video = videoRef.current;
         const playPromise = video.play();
-
-        setIsPlaying(true);
-        setIsMuted(false);
         // //  prevent "The play() request was interrupted by a call to pause()" error
         if (playPromise !== undefined) {
             playPromise
                 .then(() => {
+                    setIsPlaying(true);
+                    setIsMuted(false);
                     animationRef.current = requestAnimationFrame(whilePlaying);
                     video.play();
                 })

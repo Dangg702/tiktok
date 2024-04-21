@@ -1,6 +1,6 @@
 import Tippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '~/components/Button';
 import {
@@ -16,10 +16,7 @@ import {
     VolumeIcon,
 } from '~/components/Icons';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
-import { VideoContext } from '~/components/VideoContext';
 import { render5FirstItem, renderAllItem } from './ShareList';
-import * as getVideosService from '~/services/getVideosService';
-import * as likeServices from '~/services/likeServices';
 import { useVideo, useVideoActions } from '~/hooks';
 import styles from './VideoItem.module.scss';
 
@@ -70,6 +67,7 @@ function VideoItem({ data }) {
             videoRef.current.value = 0;
             handlePauseVideo();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [elementIsVisible]);
 
     useEffect(() => {
@@ -83,16 +81,6 @@ function VideoItem({ data }) {
             videoRef.current.volume = volume;
         }
     }, [isMuted, volume]);
-
-    // useEffect(() => {
-    //     const fetchApi = async () => {
-    //         const result = await getVideosService.getVideo(data.id);
-    //         // if (result) {
-
-    //         // }
-    //     };
-    //     fetchApi();
-    // }, [])
 
     const ArrowClasses = cx('share-arrow', {
         hide: hideArrowIcon,

@@ -1,12 +1,11 @@
 import Tippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '~/components/Button';
 import {
     ArrowDownIcon,
     FavoriteVideoIcon,
-    FlagIcon,
     HeartVideoIcon,
     MusicIcon,
     MuteIcon,
@@ -21,7 +20,6 @@ import { render5FirstItem, renderAllItem } from '../VideoItem/ShareList';
 import { useVideo, useVideoActions } from '~/hooks';
 import styles from './VideoItemFull.module.scss';
 import { XIcon } from '~/components/Icons';
-import config from '~/config';
 import Image from '~/components/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';

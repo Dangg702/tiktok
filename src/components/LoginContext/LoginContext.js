@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react';
-import React, { useState, useEffect, useNavigate } from 'react';
+import React, { useState } from 'react';
 import * as AuthService from '~/services/authService';
 import { ModalContext } from '../ModalContext';
 

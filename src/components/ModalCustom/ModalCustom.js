@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import Modal from 'react-modal';
 import { ModalContext } from '~/components/ModalContext';
-import { useModal } from '~/hooks';
 
 const customStyles = {
     content: {

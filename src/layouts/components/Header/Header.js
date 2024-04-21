@@ -14,7 +14,7 @@ import Tippy from '@tippyjs/react';
 import classNames from 'classnames/bind';
 import 'tippy.js/dist/tippy.css';
 import { Link } from 'react-router-dom';
-import { useState, useContext, useEffect } from 'react';
+import { useContext } from 'react';
 
 import config from '~/config';
 import images from '~/assets/images';
@@ -27,7 +27,6 @@ import { ModalContext } from '~/components/ModalContext';
 import { LoginContext } from '~/components/LoginContext';
 import ModalItem from '~/components/ModalItem';
 import ModalCustom from '~/components/ModalCustom/ModalCustom';
-import * as getUserService from '~/services/getUserService';
 import styles from './Header.module.scss';
 
 // bind ràng buộc theo styles đã import --> trả về func

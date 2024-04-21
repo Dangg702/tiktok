@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import VideoItemFull from '~/components/VideoItemFull';
 import * as getVideosService from '~/services/getVideosService';

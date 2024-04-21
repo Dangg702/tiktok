@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 
 import Menu, { MenuItem } from './Menu';
 import config from '~/config/config';
@@ -19,7 +19,6 @@ import Button from '~/components/Button/Button';
 import { ModalContext } from '~/components/ModalContext';
 import ModalCustom from '~/components/ModalCustom/ModalCustom';
 import ModalItem from '~/components/ModalItem';
-import { useModal } from '~/hooks';
 import styles from './Sidebar.module.scss';
 
 const cx = classNames.bind(styles);
@@ -28,7 +27,6 @@ function Sidebar() {
     const isLogin = localStorage.getItem('token');
 
     const modalContext = useContext(ModalContext);
-    // const { openModal } = useModal();
 
     return (
         <aside className={cx('wrapper')}>

@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import * as GetUserService from '~/services/getUserService';
 
 export default function useGetUser() {
