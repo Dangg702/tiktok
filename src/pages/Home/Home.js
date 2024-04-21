@@ -17,9 +17,10 @@ function Home() {
     useEffect(() => {
         const fetchApi = async () => {
             const result = await getVideosService.getListVideos('for-you', page);
-            setContentData((prev) => [...prev, ...result]);
+            if (result && typeof result[Symbol.iterator] === 'function') {
+                setContentData((prev) => [...prev, ...result]);
+            }
         };
-
         fetchApi();
     }, [page]);
 
