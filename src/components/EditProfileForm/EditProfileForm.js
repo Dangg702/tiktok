@@ -112,6 +112,7 @@ function EditProfileForm({ children }) {
         console.log('result update profile: ', result);
         setIsChange(false);
         closeModal();
+        window.location.reload();
     };
 
     return (

@@ -2,7 +2,7 @@ import * as httpRequest from '~/utils/httpRequest';
 
 export const UpdateProfileService = async (formData) => {
     try {
-        const res = await httpRequest.patch('auth/me', formData, {
+        const res = await httpRequest.post('auth/me?_method=PATCH', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
