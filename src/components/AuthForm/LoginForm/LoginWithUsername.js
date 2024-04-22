@@ -92,7 +92,7 @@ function LoginWithUsername() {
             <a className={cx('forgot-password')} href="/">
                 Forgot password?
             </a>
-            <Button onClick={() => handleSubmit()} className={cx('btn-login')} disabled={disabled} primary>
+            <Button onClick={handleSubmit} className={cx('btn-login')} disabled={disabled} primary>
                 Log in
             </Button>
         </form>

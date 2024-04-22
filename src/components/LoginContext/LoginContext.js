@@ -57,11 +57,7 @@ function LoginProvider({ children }) {
         await AuthService.logout();
         localStorage.removeItem('token');
         setData(null);
-        contentModal.setIsLogout(true);
         setLoading(false);
-        setTimeout(() => {
-            contentModal.setIsLogout(false);
-        }, 2200);
     };
 
     const values = {
